@@ -6,10 +6,9 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt')
 
 
-router.get('/authenticate', authenticate, (request, response) => {
-    response.json({message: `Welcome ${request.user.username}!` })
-    // response.json({message: `Welcome ${request.user.username}!` })
-})
+// router.get('/authenticate', authenticate, (request, response) => {
+//     response.json({message: `Welcome ${request.user.username}!` })
+// })
 
 router.get('/users', (request, response) => {
     database("users")
