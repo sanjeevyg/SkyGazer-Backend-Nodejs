@@ -10,7 +10,7 @@ const bcrypt = require('bcrypt')
 //     response.json({message: `Welcome ${request.user.username}!` })
 // })
 
-router.get('/users', (request, response) => {
+router.get('/', (request, response) => {
     database("users")
     .select()
     .returning("*")
