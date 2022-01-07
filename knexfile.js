@@ -25,7 +25,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
+      database: 'skyGazer',
       user:     'username',
       password: 'password'
     },
