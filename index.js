@@ -6,8 +6,8 @@ const bodyParser = require("body-parser")
 const userRouter = require('./routes/user.js')
 
 const app = express();
-// const port = process.env.PORT || 4000
-app.listen(process.env.PORT)
+const port = process.env.PORT
+app.listen(port)
 // app.listen(process.env.PORT, '0.0.0.0');
 
 app.use(cors())
