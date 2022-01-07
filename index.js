@@ -7,8 +7,8 @@ const userRouter = require('./routes/user.js')
 
 const app = express();
 const port = process.env.PORT
-app.listen(port)
-// app.listen(process.env.PORT, '0.0.0.0');
+app.listen(port, () => console.log(`listening at port ${port}`))
+
 
 app.use(cors())
 app.use(bodyParser.json())
