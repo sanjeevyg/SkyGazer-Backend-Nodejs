@@ -26,10 +26,10 @@ module.exports = {
     client: "pg",
     connection: process.env.DATABASE_URL,
     migrations: {
-        directory: "./database/migrations",
+        directory: "./migrations",
     },
     seeds: {
-        directory: "./database/seeds",
+        directory: "./seeds",
     },
 }
 };
