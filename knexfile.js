@@ -20,9 +20,5 @@ module.exports = {
       directory: './migrations',
     },
     seeds: { directory: './seeds' }
-  },  
-  ssl: {
-    rejectUnauthorized: false
   }
   
-};
