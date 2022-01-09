@@ -21,9 +21,17 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   },
-  prodConfig = Object.assign(
-    {},
-    devConfig,
-    { client: 'pg', connection: process.env.DATABASE_URL}
-  )
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL,
+    migrations: {
+      directory: './migrations',
+    },
+    useNullAsDefault: true,
+    seeds: { directory: './seeds' },
+    ssl: {
+      rejectUnauthorized: false,
+    }
+  },
+  
 };
