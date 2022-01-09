@@ -18,10 +18,7 @@ module.exports = {
       directory: './migrations',
     },
     useNullAsDefault: true,
-    seeds: { directory: './seeds' },
-    ssl: {
-      rejectUnauthorized: false,
-    }
+    seeds: { directory: './seeds' }
   },  
   
 };
