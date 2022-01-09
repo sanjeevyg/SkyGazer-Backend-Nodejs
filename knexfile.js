@@ -17,8 +17,10 @@ module.exports = {
       tablename: 'knex_migrations',
       directory: './migrations',
     },
-    useNullAsDefault: true,
     seeds: { directory: './seeds' }
   },  
+  ssl: {
+    rejectUnauthorized: false
+  }
   
 };
