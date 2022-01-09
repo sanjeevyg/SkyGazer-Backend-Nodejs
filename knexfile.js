@@ -7,7 +7,7 @@ module.exports = {
     connection: "postgress:///skyGazer"
   },
   production: {
-    client: client,
+    client: 'pg',
     connection: process.env.DATABASE_URL,
     pool: {
       min: 2, 
