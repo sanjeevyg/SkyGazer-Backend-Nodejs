@@ -30,7 +30,7 @@ module.exports = {
     useNullAsDefault: true,
     seeds: { directory: './seeds' },
     ssl: {
-      rejectUnauthorized: false,
+      rejectUnauthorized: true,
     }
   },
   
