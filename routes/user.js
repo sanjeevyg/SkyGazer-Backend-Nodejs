@@ -10,19 +10,19 @@ const bcrypt = require('bcrypt')
 //     response.json({message: `Welcome ${request.user.username}!` })
 // })
 
-router.get('/', (request, response) => {
-  response.json("hello world")
-})
 // router.get('/', (request, response) => {
-//     database("users")
-//     .select()
-//     .returning("*")
-//     .then((users) => {
-//         response.json(users)
-//     }).catch(error => {
-//         response.json({error: error.message})
-//     })
+//   response.json("hello world")
 // })
+router.get('/', (request, response) => {
+    database("users")
+    .select()
+    .returning("*")
+    .then((users) => {
+        response.json(users)
+    }).catch(error => {
+        response.json({error: error.message})
+    })
+})
 
 // router.get('/users/:id', (request, response) => {
 //     const id = request.params.id
