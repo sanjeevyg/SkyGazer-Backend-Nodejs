@@ -1,24 +1,10 @@
 // const knex = require('knex')
-// const config = require('../knexfile')[process.env.DB_ENV || "development"]
-// const config = require('../knexfile')[production || "development"]
+// const config = require('../knexfile')[process.env.DB_ENVIRONMENT || "development"]
+
+const dbEngine = process.env.DB_ENVIRONMENT || "development";
+const config = require("../knexfile")[dbEngine];
 
 
-// module.exports = knex(config);
+module.exports = require("knex")(config);
 
 
-const knex = require('knex');
-const knexConfig = require('../knexfile');
-const environment = process.env.DB_ENV || 'development';
-module.exports = knex(knexConfig[environment]);
-
-// let dbConnectionConfig
-// switch (process.env.NODE_ENV){
-//     case 'production':
-//       dbConnectionConfig = dbConfigObj.production;
-//       break;
-//     default:
-//       dbConnectionConfig = 
-//       dbConfigObj.development
-// }
-
-// const appDb = connectToDb(dbConnectionConfig)
